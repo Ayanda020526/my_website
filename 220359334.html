@@ -1,0 +1,540 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>220359334 | Career Portfolio</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #fff7f8;
+            color: #6f4f57;
+            line-height: 1.7;
+        }
+
+        h1, h2, h3 {
+            font-family: Georgia, "Times New Roman", serif;
+            font-weight: normal;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        /* NAVIGATION */
+
+        nav {
+            padding: 25px 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-family: Georgia, serif;
+            font-size: 24px;
+            color: #b97889;
+        }
+
+        nav a {
+            color: #8c626d;
+            text-decoration: none;
+            margin-left: 25px;
+            font-size: 14px;
+        }
+
+        nav a:hover {
+            color: #c78496;
+        }
+
+        /* HERO */
+
+        .hero {
+            min-height: 520px;
+            border: 2px solid #e5a9b8;
+            border-radius: 25px;
+            padding: 55px;
+            display: grid;
+            grid-template-columns: 1.4fr 1fr;
+            gap: 50px;
+            align-items: center;
+            background: #fffafb;
+        }
+
+        .hero h1 {
+            font-size: 64px;
+            line-height: 1.05;
+            color: #b97889;
+            margin-bottom: 25px;
+        }
+
+        .hero p {
+            max-width: 620px;
+            font-size: 17px;
+            margin-bottom: 25px;
+        }
+
+        .hero-image {
+            background: #f2c7d1;
+            border-radius: 30px 30px 100px 30px;
+            padding: 15px;
+            text-align: center;
+        }
+
+        .hero-image img {
+            width: 100%;
+            max-width: 330px;
+            height: 380px;
+            object-fit: cover;
+            border-radius: 25px 25px 90px 25px;
+        }
+
+        .button {
+            display: inline-block;
+            background: #d99aab;
+            color: white;
+            padding: 12px 28px;
+            border-radius: 25px;
+            text-decoration: none;
+            margin-right: 10px;
+        }
+
+        .button-outline {
+            background: transparent;
+            border: 1px solid #d99aab;
+            color: #b97889;
+        }
+
+        /* SECTIONS */
+
+        section {
+            margin: 100px 0;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 44px;
+            color: #b97889;
+            margin-bottom: 15px;
+        }
+
+        .section-subtitle {
+            text-align: center;
+            max-width: 650px;
+            margin: 0 auto 50px;
+            color: #9a737d;
+        }
+
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+        }
+
+        .card {
+            background: #f7dce2;
+            padding: 35px;
+            border-radius: 20px;
+            min-height: 220px;
+            transition: 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+        }
+
+        .card h3 {
+            font-size: 25px;
+            color: #a96979;
+            margin-bottom: 15px;
+        }
+
+        /* ABOUT */
+
+        .about {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 25px;
+        }
+
+        .about-box {
+            border: 1px solid #edc0ca;
+            border-radius: 20px;
+            padding: 40px;
+            background: white;
+        }
+
+        .about-box h2 {
+            font-size: 36px;
+            color: #b97889;
+            margin-bottom: 20px;
+        }
+
+        hr {
+            border: none;
+            border-top: 1px solid #e6b5c0;
+            margin: 25px 0;
+        }
+
+        /* LINKS */
+
+        .links-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+        }
+
+        .link-card {
+            border: 1px solid #edb8c5;
+            border-radius: 18px;
+            padding: 30px;
+            text-align: center;
+            text-decoration: none;
+            color: #96606f;
+            background: #fffafa;
+        }
+
+        .link-card:hover {
+            background: #f9dce3;
+        }
+
+        /* AUDIO */
+
+        .audio-section {
+            background: #efc0cb;
+            padding: 50px;
+            border-radius: 25px;
+            text-align: center;
+        }
+
+        audio {
+            width: 100%;
+            max-width: 500px;
+            margin-top: 20px;
+        }
+
+        /* FOOTER */
+
+        footer {
+            background: #edbdc8;
+            padding: 45px 0;
+            text-align: center;
+            margin-top: 100px;
+        }
+
+        footer p {
+            color: #795761;
+        }
+
+        /* MOBILE */
+
+        @media (max-width: 800px) {
+            .hero,
+            .about,
+            .cards,
+            .links-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .hero {
+                padding: 30px;
+            }
+
+            .hero h1 {
+                font-size: 42px;
+            }
+
+            nav {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            nav a {
+                margin: 0 8px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <nav>
+        <div class="logo">AYANDA EMILY KOLISI.</div>
+
+        <div>
+            <a href="#about">About</a>
+            <a href="#interests">Interests</a>
+            <a href="#links">Links</a>
+            <a href="project.html">Project</a>
+        </div>
+    </nav>
+
+    <!-- HERO -->
+
+    <section class="hero">
+
+        <div>
+            <p>HELLO, WELCOME TO MY PORTFOLIO</p>
+
+            <h1>
+                Building ideas<br>
+                through technology.
+            </h1>
+
+            <p>
+                I am a university student passionate about software development,
+                web technologies, cybersecurity and artificial intelligence.
+            </p>
+
+            <a href="project.html" class="button">
+                View Project
+            </a>
+
+            <a href="#about" class="button button-outline">
+                About Me
+            </a>
+        </div>
+
+        <div class="hero-image">
+            <img src="images/IMG_20260526_171212_945.jpg" alt="My profile picture">
+        </div>
+
+    </section>
+
+    <!-- ABOUT -->
+
+    <section id="about">
+
+        <h2 class="section-title">About me</h2>
+
+        <p class="section-subtitle">
+            A little introduction to my academic background and career direction.
+        </p>
+
+        <div class="about">
+
+            <div class="about-box">
+
+                <h2>Who I am</h2>
+
+                <p>
+                    I am a university student with a strong interest in computer
+                    science and modern technology.
+                </p>
+
+                <hr>
+
+                <p>
+                    I enjoy learning how websites, applications and computer
+                    systems are designed and developed.
+                </p>
+
+            </div>
+
+            <div class="about-box">
+
+                <h2>My goal</h2>
+
+                <p>
+                    My goal is to become a skilled software developer and use
+                    technology to create useful solutions for real-world problems.
+                </p>
+
+                <hr>
+
+                <p>
+                    Student Number:
+                    <strong>220359334</strong>
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- CAREER INTERESTS -->
+
+    <section id="interests">
+
+        <h2 class="section-title">Career interests</h2>
+
+        <p class="section-subtitle">
+            These are some of the technology fields that interest me most.
+        </p>
+
+        <div class="cards">
+
+            <div class="card">
+                <h3>Software Development</h3>
+                <p>
+                    Designing and developing reliable applications that solve
+                    practical problems.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>Web Development</h3>
+                <p>
+                    Building modern, responsive and user-friendly websites and
+                    web applications.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>Cybersecurity</h3>
+                <p>
+                    Learning how computer systems and user information can be
+                    protected from security threats.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>Artificial Intelligence</h3>
+                <p>
+                    Exploring intelligent systems that can assist people,
+                    automate processes and improve decision-making.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>Frontend Development</h3>
+                <p>
+                    Creating attractive and interactive interfaces that provide
+                    a good user experience.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>Problem Solving</h3>
+                <p>
+                    Using programming and technology to develop creative
+                    solutions to real-world challenges.
+                </p>
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- PROFESSIONAL LINKS -->
+
+    <section id="links">
+
+        <h2 class="section-title">Professional links</h2>
+
+        <p class="section-subtitle">
+            Some useful websites related to my professional interests.
+        </p>
+
+        <div class="links-grid">
+
+            <a href="https://github.com/japanimbasa"
+               target="_blank"
+               class="link-card">
+                GitHub
+            </a>
+
+            <a href="https://www.linkedin.com/"
+               target="_blank"
+               class="link-card">
+                LinkedIn
+            </a>
+
+            <a href="https://www.w3schools.com/"
+               target="_blank"
+               class="link-card">
+                W3Schools
+            </a>
+
+            <a href="https://stackoverflow.com/"
+               target="_blank"
+               class="link-card">
+                Stack Overflow
+            </a>
+
+        </div>
+
+    </section>
+
+    <!-- AUDIO -->
+
+    <!-- AUDIO -->
+
+<section class="audio-section">
+
+    <h2>My favourite sound</h2>
+
+    <p>
+        Enjoy some music while viewing my portfolio.
+    </p>
+
+    <audio id="backgroundMusic" autoplay preload="auto" controls>
+        <source src="audio/Different Species.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+
+</section>
+
+<script>
+    const music = document.getElementById("backgroundMusic");
+
+    music.volume = 0.5;
+
+    window.addEventListener("DOMContentLoaded", function () {
+
+        const playPromise = music.play();
+
+        if (playPromise !== undefined) {
+
+            playPromise
+                .then(function () {
+                    console.log("Music started automatically.");
+                })
+                .catch(function () {
+
+                    console.log("Browser blocked automatic audio.");
+
+                    // Start music as soon as the visitor interacts
+                    // with the page if autoplay was blocked.
+
+                    const startMusic = function () {
+
+                        music.play();
+
+                        document.removeEventListener("click", startMusic);
+                        document.removeEventListener("keydown", startMusic);
+                        document.removeEventListener("touchstart", startMusic);
+                    };
+
+                    document.addEventListener("click", startMusic);
+                    document.addEventListener("keydown", startMusic);
+                    document.addEventListener("touchstart", startMusic);
+
+                });
+        }
+
+    });
+</script>
+
+</div>
+
+<footer>
+    <p>
+        CSS37W2 • Student Number 220359334
+    </p>
+</footer>
+
+</body>
+</html>

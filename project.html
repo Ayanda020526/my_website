@@ -1,0 +1,583 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>ByteMe | Smart Quiz Learning Platform</title>
+
+    <style>
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background: #fff7f8;
+            color: #73545c;
+            font-family: Arial, sans-serif;
+            line-height: 1.7;
+        }
+
+        h1, h2, h3 {
+            font-family: Georgia, "Times New Roman", serif;
+            font-weight: normal;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 25px 0;
+        }
+
+        nav h2 {
+            color: #b97889;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #92636f;
+            margin-left: 22px;
+        }
+
+        /* HERO */
+
+        .hero {
+            background: #f1c4ce;
+            border-radius: 28px;
+            padding: 70px 55px;
+            margin-bottom: 100px;
+        }
+
+        .hero span {
+            font-size: 14px;
+            letter-spacing: 3px;
+        }
+
+        .hero h1 {
+            color: white;
+            font-size: 65px;
+            max-width: 800px;
+            line-height: 1.05;
+            margin: 20px 0;
+        }
+
+        .hero p {
+            max-width: 650px;
+            font-size: 17px;
+        }
+
+        /* GENERAL */
+
+        section {
+            margin-bottom: 100px;
+        }
+
+        .title {
+            font-size: 45px;
+            color: #b97889;
+            margin-bottom: 15px;
+        }
+
+        .subtitle {
+            max-width: 700px;
+            margin-bottom: 40px;
+        }
+
+        /* PROBLEM */
+
+        .split {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 25px;
+        }
+
+        .panel {
+            border: 1px solid #eab7c3;
+            background: white;
+            border-radius: 22px;
+            padding: 40px;
+        }
+
+        .panel h3 {
+            color: #ac7180;
+            font-size: 28px;
+            margin-bottom: 20px;
+        }
+
+        /* FEATURES */
+
+        .features {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+
+        .feature {
+            background: #f5d5dc;
+            min-height: 230px;
+            padding: 30px;
+            border-radius: 20px;
+        }
+
+        .feature h3 {
+            color: #a86d7b;
+            margin-bottom: 15px;
+        }
+
+        /* USERS */
+
+        .user-row {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+        }
+
+        .user-card {
+            border: 1px solid #e9b5c2;
+            border-radius: 20px;
+            padding: 35px;
+            text-align: center;
+            background: #fffafa;
+        }
+
+        .circle {
+            width: 70px;
+            height: 70px;
+            background: #edbdc8;
+            border-radius: 50%;
+            margin: 0 auto 20px;
+        }
+
+        /* TEAM */
+
+        .team-section {
+            background: #efc0cb;
+            border-radius: 28px;
+            padding: 50px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 30px;
+            background: #fff9fa;
+        }
+
+        th, td {
+            padding: 18px;
+            border-bottom: 1px solid #e4b4bf;
+            text-align: left;
+        }
+
+        th {
+            background: #d995a5;
+            color: white;
+        }
+
+        /* TECH */
+
+        .tech-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+        }
+
+        .tech {
+            border: 1px solid #ebb7c3;
+            padding: 30px 20px;
+            text-align: center;
+            border-radius: 18px;
+        }
+
+        /* CONCLUSION */
+
+        .conclusion {
+            padding: 60px;
+            border: 2px solid #e7adba;
+            border-radius: 25px;
+            text-align: center;
+        }
+
+        .conclusion h2 {
+            color: #b97889;
+            font-size: 45px;
+            margin-bottom: 20px;
+        }
+
+        .back {
+            display: inline-block;
+            margin-top: 25px;
+            padding: 12px 25px;
+            border-radius: 25px;
+            background: #d697a6;
+            color: white;
+            text-decoration: none;
+        }
+
+        footer {
+            margin-top: 80px;
+            padding: 40px;
+            background: #edbec9;
+            text-align: center;
+        }
+
+        @media(max-width: 800px) {
+
+            .split,
+            .features,
+            .user-row,
+            .tech-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .hero h1 {
+                font-size: 42px;
+            }
+
+            .hero {
+                padding: 40px 25px;
+            }
+
+            .team-section {
+                padding: 25px;
+                overflow-x: auto;
+            }
+        }
+
+    </style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <nav>
+
+        <h2>ByteMe.</h2>
+
+        <div>
+            <a href="220359334.html">Home</a>
+            <a href="#features">Features</a>
+            <a href="#team">Team</a>
+        </div>
+
+    </nav>
+
+    <!-- HERO -->
+
+    <section class="hero">
+
+        <span>SMART LEARNING EXPERIENCE</span>
+
+        <h1>
+            Learn smarter with
+            ByteMe.
+        </h1>
+
+        <p>
+            A Smart Quiz Learning Platform designed to help learners discover
+            their weak areas, practise through intelligent quizzes and monitor
+            their academic progress.
+        </p>
+
+    </section>
+
+    <!-- ABOUT -->
+
+    <section>
+
+        <h2 class="title">The idea</h2>
+
+        <p class="subtitle">
+            ByteMe transforms traditional studying into an interactive and
+            personalised learning experience.
+        </p>
+
+        <div class="split">
+
+            <div class="panel">
+
+                <h3>The problem</h3>
+
+                <p>
+                    Many students struggle to identify the topics they do not
+                    fully understand.
+                </p>
+
+                <br>
+
+                <p>
+                    Traditional learning can often be passive and may not give
+                    students immediate feedback about their strengths and
+                    weaknesses.
+                </p>
+
+            </div>
+
+            <div class="panel">
+
+                <h3>Our solution</h3>
+
+                <p>
+                    ByteMe provides interactive quizzes, intelligent question
+                    generation, performance analytics and personalised
+                    assessments.
+                </p>
+
+                <br>
+
+                <p>
+                    Learners receive information that can help them decide which
+                    topics require additional study.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- FEATURES -->
+
+    <section id="features">
+
+        <h2 class="title">What ByteMe offers</h2>
+
+        <p class="subtitle">
+            The platform combines learning, artificial intelligence and
+            performance tracking in one environment.
+        </p>
+
+        <div class="features">
+
+            <div class="feature">
+                <h3>User Management</h3>
+                <p>
+                    Registration, authentication, login and user profile
+                    management.
+                </p>
+            </div>
+
+            <div class="feature">
+                <h3>Quiz Engine</h3>
+                <p>
+                    Present questions, evaluate answers and automatically
+                    calculate scores.
+                </p>
+            </div>
+
+            <div class="feature">
+                <h3>AI Generator</h3>
+                <p>
+                    Generate quiz questions from uploaded learning notes.
+                </p>
+            </div>
+
+            <div class="feature">
+                <h3>Analytics</h3>
+                <p>
+                    Track scores, learner progress and areas requiring
+                    improvement.
+                </p>
+            </div>
+
+            <div class="feature">
+                <h3>Content Upload</h3>
+                <p>
+                    Allow learners to upload notes and learning materials.
+                </p>
+            </div>
+
+            <div class="feature">
+                <h3>Gamification</h3>
+                <p>
+                    Encourage participation through points, achievements and
+                    badges.
+                </p>
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- TARGET USERS -->
+
+    <section>
+
+        <h2 class="title">Who is it for?</h2>
+
+        <p class="subtitle">
+            ByteMe is designed for learners at different stages of their
+            education.
+        </p>
+
+        <div class="user-row">
+
+            <div class="user-card">
+                <div class="circle"></div>
+
+                <h3>University Students</h3>
+
+                <p>
+                    Students who want to revise course material and identify
+                    weak academic areas.
+                </p>
+            </div>
+
+            <div class="user-card">
+                <div class="circle"></div>
+
+                <h3>High School Learners</h3>
+
+                <p>
+                    Learners preparing for examinations and improving subject
+                    understanding.
+                </p>
+            </div>
+
+            <div class="user-card">
+                <div class="circle"></div>
+
+                <h3>Self-Learners</h3>
+
+                <p>
+                    Independent learners who want a structured way to test
+                    their knowledge.
+                </p>
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- TECHNOLOGY -->
+
+    <section>
+
+        <h2 class="title">Technology</h2>
+
+        <div class="tech-grid">
+
+            <div class="tech">
+                <h3>React</h3>
+                <p>Frontend</p>
+            </div>
+
+            <div class="tech">
+                <h3>Django</h3>
+                <p>Backend</p>
+            </div>
+
+            <div class="tech">
+                <h3>Python</h3>
+                <p>Development</p>
+            </div>
+
+            <div class="tech">
+                <h3>AI</h3>
+                <p>Question Generation</p>
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- TEAM -->
+
+    <section id="team" class="team-section">
+
+        <h2 class="title">Meet the team</h2>
+
+        <p>
+            The project is developed collaboratively by team members with
+            different responsibilities.
+        </p>
+
+        <table>
+
+            <tr>
+                <th>Name</th>
+                <th>Role</th>
+                <th>Responsibility</th>
+            </tr>
+
+            <tr>
+                <td>LIYEMA DAMOYI</td>
+                <td>Frontend Developer</td>
+                <td>
+                    User interface design and frontend implementation.
+                </td>
+            </tr>
+
+            <tr>
+                <td>AYANDA KOLISI</td>
+                <td>Backend Developer</td>
+                <td>
+                    Backend APIs and application logic.
+                </td>
+            </tr>
+
+            <tr>
+                <td>PHIKOLOMZI NDAYI</td>
+                <td>Database Developer</td>
+                <td>
+                    Database design and management.
+                </td>
+            </tr>
+
+            <tr>
+                <td>PHILILE BELE</td>
+                <td>Quality Assurance</td>
+                <td>
+                    Software testing and quality control.
+                </td>
+            </tr>
+
+            <tr>
+                <td>PHILASANDE NGAVELI</td>
+                <td>Backend Developer</td>
+                <td>
+                    Backend APIs and application logic.
+                </td>
+            </tr>
+
+        </table>
+
+    </section>
+
+    <!-- CONCLUSION -->
+
+    <section class="conclusion">
+
+        <h2>Learning made smarter.</h2>
+
+        <p>
+            ByteMe combines quizzes, artificial intelligence, performance
+            analytics and gamification to create an engaging and personalised
+            learning experience.
+        </p>
+
+        <a href="220359334.html" class="back">
+            Back to Portfolio
+        </a>
+
+    </section>
+
+</div>
+
+<footer>
+    ByteMe Smart Quiz Learning Platform • CSS37W2
+</footer>
+
+</body>
+</html>
